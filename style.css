@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
+  width: 95%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:500px ;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+input, select, button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  width: 100%;
+}
+
+table td {
+  vertical-align: top;
+  border: 1px solid #000;
+  padding: 8px;
+}
+#relatorio{
+  width: 800px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nota Fiscal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+      <h1>Realize sua compra</h1>
+    <form id="form">
+      <fieldset>
+        <input type="text" placeholder="Nome" id="nome" required>
+        <input type="email" placeholder="E-mail" id="email" required>
+        <input type="number" placeholder="CPF" id="cpf" required>
+        <input type="text" placeholder="Endereço" id="endereco" required>
+        <input type="tel" placeholder="Telefone" id="telefone">
+
+        <select id="fornecedor" required>
+          <option value="">Selecione o fornecedor</option>
+          <option value="JP">JP</option>
+          <option value="Caio">Caio</option>
+          <option value="Hideki">Hideki</option>
+          <option value="Enrico">Enrico</option>
+          <option value="Shinaidei">Shinaidei</option>
+        </select>
+
+        <select id="jogo" required>
+          <option value="">Selecione o Jogo</option>
+          <option value="God Of War">God Of War</option>
+          <option value="Hollow Knight: Silksong">Hollow Knight: Silksong</option>
+          <option value="Doom">Doom</option>
+          <option value="Dragon Ball: Sparking! Zero">Dragon Ball: Sparking! Zero</option>
+        </select>
+
+        <select id="midia" required>
+          <option value="">Selecione a mídia</option>
+          <option value="Digital">Digital</option>
+          <option value="Física">Física (10% de desconto)</option>
+        </select>
+
+        <input type="hidden" id="campo1">
+        <input type="hidden" id="campo2">
+        <input type="hidden" id="campo3">
+
+        <br><br>
+        <button type="button" onclick="enviar()">Comprar</button>
+        <button type="button" onclick="gerar()">Gerar Relatório</button>
+        <button type="button" onclick="gerar(true)">Gerar PDF</button>
+        <button type="button" onclick="gerar(false, true)">Imprimir</button>
+      </fieldset>
+    </form>
+
+    <div id="relatorio" style="visibility: hidden; position: static; margin-top: 20px;">
+      <table cellpadding="5">
+        <tr>
+          <td colspan="2"><strong>Nome:</strong> <span id="relatorio1"></span></td>
+          <td><strong>CPF:</strong> <span id="relatorio3"></span></td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>E-mail:</strong> <span id="relatorio2"></span></td>
+          <td><strong>Telefone:</strong> <span id="relatorio4"></span></td>
+        </tr>
+        <tr>
+          <td colspan="3"><strong>Endereço:</strong> <span id="relatorio5"></span></td>
+        </tr>
+        <tr>
+          <td><strong>Fornecedor:</strong> <span id="relatorio6"></span></td>
+          <td><strong>Jogo:</strong> <span id="relatorio7"></span></td>
+          <td><strong>Mídia:</strong> <span id="relatorio8"></span></td>
+        </tr>
+        <tr>
+          <td colspan="3"><strong>Valor Pago:</strong> <span id="relatorio9"></span></td>
+        </tr>
+      </table>
+      <button id="comprarOutraVez" onclick="recarregar()" style="display: none;">Realzar outra Compra</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
