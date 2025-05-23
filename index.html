@@ -49,9 +49,7 @@
         <button type="button" onclick="gerar()">Gerar Relatório</button>
       </fieldset>
     </form>
-        <button type="button" onclick="gerar(true)">Gerar PDF</button>
-        <button type="button" onclick="gerar(false, true)">Imprimir</button>
-
+    
     <div id="relatorio" style="visibility: hidden; position: static; margin-top: 20px;">
       <table cellpadding="5">
         <tr>
@@ -74,7 +72,11 @@
           <td colspan="3"><strong>Valor Pago:</strong> <span id="relatorio9"></span></td>
         </tr>
       </table>
-      <button id="comprarOutraVez" onclick="recarregar()" style="display: none;">Realzar outra Compra</button>
+      <div id="botoes">
+        <button id="comprarOutraVez" onclick="recarregar()" style="display: none; width: 33%;">Realzar outra Compra</button>
+      <button type="button" onclick="gerar(true)" style="width: 33%;">Gerar PDF</button>
+      <button type="button" onclick="gerar(false, true) " style="width: 33%;">Imprimir</button>
+      </div>
     </div>
   </div>
 
