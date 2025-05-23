@@ -46,4 +46,9 @@ table td {
 }
 #relatorio{
   width: 800px;
+
+}
+#botoes{
+  display: flex;
+  justify-content: space-between;
 }
